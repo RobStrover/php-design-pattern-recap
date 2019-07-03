@@ -108,3 +108,14 @@ All our (now) subclasses merely extend the duplicate functionality.
 
 We can use an abstract method in our abstract class to force our sub classes to implement certain functionality that we 
 cannot duplicate.
+
+## Strategy Pattern ##
+The strategy pattern defines a family of algorithms, encapsulates them and makes them interchangeable.
+
+1. Define a family of algorithms
+2. Encapsulate each member and make them interchangeable
+3. Use them in context
+
+This separates the context from the member. Meaning the member can changed easily.
+
+Code to the interface!
