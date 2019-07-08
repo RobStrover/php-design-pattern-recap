@@ -119,3 +119,26 @@ The strategy pattern defines a family of algorithms, encapsulates them and makes
 This separates the context from the member. Meaning the member can changed easily.
 
 Code to the interface!
+
+## Specification Pattern ##
+This allows us to take any kind of business and make it a first class citizen.
+
+For example "A customer can be a gold subscriber".
+
+Let's take the concept of being a gold subscriber literally and name our class:
+
+```php
+class CustomerIsGold implements CustomerSpecification {
+
+    public function isSatisfiedBy(Customer $customer)
+    {
+        $customer->type == 'gold';
+        // This can be as complex as it needs to be.
+    }
+
+}
+```
+
+The idea is that we apply the concept to any customer object with the logic for working out if the customer is gold in 
+this class.
+

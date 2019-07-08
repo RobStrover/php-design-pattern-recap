@@ -1,0 +1,8 @@
+{
+    "require": {
+        "phpunit/phpunit": "^8.2"
+    },
+    "autoload": {
+        "classmap": ["src"]
+    }
+}
