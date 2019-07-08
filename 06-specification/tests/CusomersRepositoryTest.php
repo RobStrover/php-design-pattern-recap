@@ -8,17 +8,7 @@ class CusomersRepositoryTest extends \PHPUnit\Framework\TestCase
 
     public function setUp(): void
     {
-        $this->customers = new CustomersRepository(
-            [
-                new Customer('gold'),
-                new Customer('bronze'),
-                new Customer('gold'),
-                new Customer('silver'),
-                new Customer('gold'),
-                new Customer('gold'),
-                new Customer('gold'),
-            ]
-        );
+        $this->customers = new CustomersRepository;
     }
 
     /** @test */
