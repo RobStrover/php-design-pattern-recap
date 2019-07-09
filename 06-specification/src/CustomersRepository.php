@@ -3,27 +3,16 @@
 class CustomersRepository
 {
 
-    protected $customers;
-
-    public function __construct(array $customers)
+    public function whoMatch($specification)
     {
-        $this->customers = $customers;
-    }
 
-    public function matchingSpecification($specification)
-    {
-        $matches = [];
+        return $specification->asScope(Customer::query())->get();
 
-        foreach ($this->customers as $customer) {
-            if ($specification->isSatisfiedBy($customer)) $matches[] = $customer;
-        }
-
-        return $matches;
     }
 
     public function all()
     {
-        return $this->customers;
+        return Customer::all();
     }
 
 }

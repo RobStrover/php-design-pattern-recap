@@ -142,3 +142,20 @@ class CustomerIsGold implements CustomerSpecification {
 The idea is that we apply the concept to any customer object with the logic for working out if the customer is gold in 
 this class.
 
+Try running the tests with `vendor/bin/phpunit --colors tests`
+
+In the example in the folder...
+
+A customer is an Eloquent model. Customers have a name and a type. The type property is encapsulated with the `getType()` 
+function.
+
+The piece of functionality we know we will often want to use is to know if a customer is a gold subscriber or not. This can 
+be achieved with a function from within the model but if the logic starts getting really complicated, we could opt to create 
+a `CustomerIsGold` class to be treated as a specification.
+
+The specification contains the a function that takes a `Customer` object and returns their type.
+
+To be able to access (n) number of customers, we create a `CustomerRepository` class. The responsibility of this class is 
+to return all customers or those who match a given specification.
+
+Tests are then used to show that each part of the set up works.
