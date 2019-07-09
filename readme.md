@@ -120,6 +120,14 @@ This separates the context from the member. Meaning the member can changed easil
 
 Code to the interface!
 
+## Chain of Responsibility Pattern ##
+Object calls are chained one after the other. Each stage in the chain is given the opportunity to handle the request or 
+defer to the next part of the chain.
+
+This means that the responsibility of how a request gets handled is taken away from the requester.
+
+A great example of where this pattern has been used is in Laravels Middleware implementation.
+
 ## Specification Pattern ##
 This allows us to take any kind of business and make it a first class citizen.
 
