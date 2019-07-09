@@ -167,3 +167,7 @@ To be able to access (n) number of customers, we create a `CustomerRepository` c
 to return all customers or those who match a given specification.
 
 Tests are then used to show that each part of the set up works.
+
+## Observer Pattern ##
+We are creating a one to many relationship so that a change in an object is an event that other objects can react to.
+
